@@ -11,6 +11,7 @@ on:
 jobs:
   test:
     strategy:
+      fail-fast: false
       matrix:
         platform: [x86, x64]
         os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, windows-2019, windows-2022]
@@ -36,6 +37,7 @@ jobs:
 
   versions:
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04]
         version: ['3.9', '4.0', 4, '5.0', 5, '6.0', 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
